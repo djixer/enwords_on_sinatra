@@ -1,0 +1,27 @@
+
+<center>
+<h3>Весь список слов в базе.</h3>
+<table>
+  <tr>
+    <th> № </th>
+    <th>English</th>
+    <th>Transcription</th>
+    <th>Russian</th>
+    <th>Right</th>
+    <th>Wrong</th>
+    <th>Ссылка на слово</th>
+  </tr>
+
+  <% @words.each do |word| %>
+    <tr>
+      <td valign="center" align="center"><%= word.id %></td>
+      <td valign="" align=""><%= word.eng_word %></td>
+      <td valign="" align=""><%= word.transcription %></td>
+      <td valign="" align=""><%= word.rus_word %></td>
+      <td valign="center" align="center"><%= word.right_answers %></td>
+      <td valign="center" align="center"><%= word.wrong_answers %></td>
+      <td></td>
+    </tr>
+  <% end %>
+</table>
+</center>

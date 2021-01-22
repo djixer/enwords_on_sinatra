@@ -1,0 +1,32 @@
+
+<h3>Новый тест!</h3>
+
+
+<form action="/test" method="POST">
+  <table>
+  <tr>
+    <th>Слово</th>
+    <th>Введите перевод</th>
+    <th>Произношение</th>
+  </tr>
+
+
+<% (0..9).each do |i| %>
+   <tr>
+      <td><%= @eng_word[i] %></td> <td><input type="text" name="answer[]"></td> <td><%= @transcription[i] %></td>
+      <input type="hidden" name="right_answer[]" value="<%= @rus_word[i] %>"/>
+      <input type="hidden" name="eng_original[]" value="<%= @eng_word[i] %>"/>
+      <input type="hidden" name="id_slova[]" value="<%= @id_slova[i] %>"/>
+    </tr>
+<% end %>
+    
+	
+</table>
+  <p>
+    <input type="submit" value="Сдать тест">
+  </p>
+<br>
+<br>
+  <a href="/test">Сгенерировать новый тест</a><br>
+  <a href="/">Вернуться на стартовую страницу</a><br>
+</form>

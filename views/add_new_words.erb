@@ -1,0 +1,23 @@
+
+	<form action="/add-new-words" method="POST">
+  
+    <label>Английское слово</label>
+    <input name="word[eng_word]" type="text" value="<%= @new_eng_word %>"><br>
+  
+
+  
+    <label>Произношение</label>
+    <input name="word[transcription]" type="text" value="<%= @transcription %>"><br>
+  
+
+  
+    <label>Русский перевод</label>
+    <input name="word[rus_word]" type="text" value="<%= @new_rus_word %>"><br>
+  
+
+  <button type="submit">Добавить слово в базу</button>
+
+</form>
+
+
+<%= @error %>

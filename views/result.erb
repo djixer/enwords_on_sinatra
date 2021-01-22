@@ -1,0 +1,11 @@
+
+<h3>Результат теста:</h3>
+
+<% (0..9).each do |i| %>
+	<%= i+1 %> <b><%= @eng_original[i] %> - <%= @right_answer[i] %></b> Ваш ответ: <b><%= @user_answer[i] %></b><br>
+<% end %>
+<br>
+<br>
+Итоговый результат из 10 слов: <%= @result_right_answers %>!<br>
+<a href="/test">Начать новый тест</a><br>
+<a href="/">Вернуться на стартовую страницу</a><br>
